@@ -5,7 +5,8 @@ import { FaBars } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 import {links} from "../utils/constants";
 import { useProductsContext } from '../context/products_context'
-import { useUserContext } from '../context/user_context '
+import { useUserContext } from '../context/user_context'
+import CartButtons from "./CartButtons";
 
 const Navbar = () => {
     const {openSidebar} = useProductsContext();
@@ -33,6 +34,7 @@ const Navbar = () => {
                         })
                     }
                 </ul>
+                <CartButtons />
             </div>
         </NavContainer>
     );
