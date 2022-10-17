@@ -5,6 +5,7 @@ import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { UserProvider } from './context/user_context '
 import { ProductProvider } from './context/products_context'
+import { CartProvider } from './context/cart_context';
 
 // dev-pu8wyk-g.us.auth0.com
 // 7vHgXJ01aWGyMVLWdZUwQSUapigdjfKu
@@ -18,9 +19,11 @@ root.render(
   >
   <UserProvider>
     <ProductProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <CartProvider>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </CartProvider>
     </ProductProvider>
   </UserProvider>
 </Auth0Provider>

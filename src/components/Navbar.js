@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import {links} from "../utils/constants";
 import { useProductsContext } from '../context/products_context'
 import { useUserContext } from '../context/user_context '
+import CartButton from "./CartButton";
 
 const Navbar = () => {
     const {openSidebar} = useProductsContext();
@@ -33,6 +34,7 @@ const Navbar = () => {
                         })
                     }
                 </ul>
+                <CartButton />
             </div>
         </NavContainer>
     );
